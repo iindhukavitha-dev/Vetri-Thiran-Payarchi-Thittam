@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Interior Planner
+{% endblock %}
+
+{% block content %}
+
+<div class="card">
+
+    <h1>
+        Home Interior Budget Planner
+    </h1>
+
+    <p>
+        Enter your budget, rooms and preferred style.
+    </p>
+
+
+    <form
+        method="post"
+        action="/generate-home"
+    >
+
+        <div class="form-group">
+
+            <label>
+                Total Budget
+            </label>
+
+            <input
+                type="number"
+                name="budget"
+                min="1"
+                step="0.01"
+                placeholder="Example: 100000"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Rooms
+            </label>
+
+            <div class="checkbox-grid">
+
+                <label class="checkbox">
+                    <input
+                        type="checkbox"
+                        name="rooms"
+                        value="Living Room"
+                    >
+                    Living Room
+                </label>
+
+                <label class="checkbox">
+                    <input
+                        type="checkbox"
+                        name="rooms"
+                        value="Bedroom"
+                    >
+                    Bedroom
+                </label>
+
+                <label class="checkbox">
+                    <input
+                        type="checkbox"
+                        name="rooms"
+                        value="Kitchen"
+                    >
+                    Kitchen
+                </label>
+
+                <label class="checkbox">
+                    <input
+                        type="checkbox"
+                        name="rooms"
+                        value="Dining Room"
+                    >
+                    Dining Room
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Style
+            </label>
+
+            <select name="style">
+
+                <option>
+                    Modern
+                </option>
+
+                <option>
+                    Minimalist
+                </option>
+
+                <option>
+                    Traditional
+                </option>
+
+                <option>
+                    Scandinavian
+                </option>
+
+                <option>
+                    Contemporary
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Additional Requirements
+            </label>
+
+            <textarea
+                name="notes"
+                placeholder="Tell PocketSmart AI about your preferences..."
+            ></textarea>
+
+        </div>
+
+
+        <button type="submit">
+            Generate Home Recommendations
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

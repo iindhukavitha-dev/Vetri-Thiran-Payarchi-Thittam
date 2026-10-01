@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}
+Recommendation History
+{% endblock %}
+
+{% block content %}
+
+<div class="card">
+
+    <h1>
+        Recommendation History
+    </h1>
+
+    <p>
+        Review your previous PocketSmart AI plans.
+    </p>
+
+</div>
+
+
+<br>
+
+
+<div class="card">
+
+    {% if records %}
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>
+                            Planner
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% for record in records %}
+
+                        <tr>
+
+                            <td>
+                                {{ record.planner_type|capitalize }}
+                            </td>
+
+                            <td>
+                                {{ record.created_at }}
+                            </td>
+
+                            <td>
+
+                                <a
+                                    href="/recommendations/{{ record.id }}"
+                                    class="button"
+                                >
+                                    View
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    {% else %}
+
+        <p>
+            No recommendation history available.
+        </p>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

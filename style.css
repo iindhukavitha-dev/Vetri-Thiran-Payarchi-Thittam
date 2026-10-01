@@ -1,0 +1,184 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+.container {
+    width: min(920px, 92%);
+    margin: 0 auto;
+    padding: 42px 0 70px;
+}
+
+/* HEADER */
+
+.hero {
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #5b65d8;
+}
+
+h1 {
+    font-size: clamp(40px, 7vw, 64px);
+    margin: 8px 0;
+}
+
+.hero p:last-child {
+    color: #586174;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* CARD */
+
+.card {
+    background: white;
+    border: 1px solid #e3e7ef;
+    border-radius: 18px;
+    padding: 24px;
+    margin-top: 18px;
+    box-shadow: 0 8px 30px rgba(20, 30, 60, 0.06);
+}
+
+/* LABEL */
+
+label {
+    display: block;
+    font-weight: 700;
+    margin: 12px 0 8px;
+}
+
+/* INPUTS */
+
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #cfd5e2;
+    border-radius: 12px;
+    padding: 13px;
+    font: inherit;
+    outline: none;
+}
+
+select:focus,
+textarea:focus {
+    border-color: #6872e8;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* BUTTONS */
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+button {
+    border: 0;
+    border-radius: 11px;
+    padding: 12px 20px;
+    background: #5b65d8;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+button.secondary {
+    background: #edf0f6;
+    color: #30384a;
+}
+
+/* STATUS */
+
+.status {
+    min-height: 20px;
+    color: #687085;
+}
+
+/* RESULT */
+
+.hidden {
+    display: none;
+}
+
+#result {
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+/* QUIZ */
+
+.quiz-item {
+    border: 1px solid #e0e4ec;
+    border-radius: 14px;
+    padding: 16px;
+    margin: 14px 0;
+}
+
+.quiz-item h3 {
+    margin-top: 0;
+}
+
+.option {
+    display: block;
+    padding: 10px;
+    margin: 7px 0;
+    border-radius: 9px;
+    background: #f5f7fa;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #e9ecf8;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .container {
+        padding-top: 24px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+```

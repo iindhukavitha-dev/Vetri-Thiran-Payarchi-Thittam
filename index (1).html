@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        EduGenie - AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <!-- HEADER -->
+
+        <header class="hero">
+
+            <p class="eyebrow">
+                AI POWERED LEARNING ASSISTANT
+            </p>
+
+            <h1>
+                EduGenie
+            </h1>
+
+            <p>
+                Learn smarter with AI.
+                Ask questions, understand concepts,
+                generate quizzes, summarize lessons,
+                and create personalized learning paths.
+            </p>
+
+        </header>
+
+
+        <!-- INPUT CARD -->
+
+        <section class="card">
+
+            <label for="task">
+                Choose a task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Topic
+                </option>
+
+                <option value="quiz">
+                    Generate Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize
+                </option>
+
+                <option value="learn">
+                    Recommend Learning Path
+                </option>
+
+            </select>
+
+
+            <label for="input">
+                Your input
+            </label>
+
+            <textarea
+                id="input"
+                rows="9"
+                placeholder="Example: Which is the largest ocean?"
+            ></textarea>
+
+
+            <div class="actions">
+
+                <button
+                    id="submit"
+                    type="button"
+                >
+                    Generate
+                </button>
+
+
+                <button
+                    id="clear"
+                    type="button"
+                    class="secondary"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+            <p
+                id="status"
+                class="status"
+            ></p>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section
+            id="resultCard"
+            class="card result-card hidden"
+        >
+
+            <h2>
+                Result
+            </h2>
+
+            <div id="result"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="{{ url_for('static', path='app.js') }}"></script>
+
+</body>
+
+</html>
